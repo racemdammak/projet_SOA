@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<operations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="operations_log.xsd">
+  <operation id="20251207163034329_UPLOAD">
+    <timestamp>2025-12-07T16:30:34</timestamp>
+    <type>UPLOAD</type>
+    <filename>match_prediction.py</filename>
+    <status>SUCCESS</status>
+    <message>Fichier uploadé avec succès</message>
+    <fileSize>4323</fileSize>
+  </operation>
+  <operation id="20251207163053812_TELECHARGER">
+    <timestamp>2025-12-07T16:30:53</timestamp>
+    <type>TELECHARGER</type>
+    <filename>deep learning in football.pdf</filename>
+    <status>SUCCESS</status>
+    <message>Fichier téléchargé avec succès</message>
+    <fileSize>183872</fileSize>
+  </operation>
+  <operation id="20251207163104374_SUPPRIMER">
+    <timestamp>2025-12-07T16:31:04</timestamp>
+    <type>SUPPRIMER</type>
+    <filename>CHapSOAP.pdf</filename>
+    <status>SUCCESS</status>
+    <message>Fichier supprimé avec succès</message>
+  </operation>
+  <operation id="20251207163120453_RESUMER">
+    <timestamp>2025-12-07T16:31:20</timestamp>
+    <type>RESUMER</type>
+    <filename>deep learning in football.pdf</filename>
+    <status>SUCCESS</status>
+    <message>Résumé généré avec succès.</message>
+    <fileSize>183872</fileSize>
+  </operation>
+</operations>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+    <!-- Élément racine: operations -->
+    <xs:element name="operations">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="operation" type="OperationType" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="xmlns:xsi" type="xs:string" use="optional"/>
+            <xs:attribute name="xsi:noNamespaceSchemaLocation" type="xs:string" use="optional"/>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Type pour une opération -->
+    <xs:complexType name="OperationType">
+        <xs:sequence>
+            <xs:element name="timestamp" type="xs:dateTime"/>
+            <xs:element name="type" type="OperationTypeEnum"/>
+            <xs:element name="filename" type="xs:string"/>
+            <xs:element name="status" type="OperationStatusEnum"/>
+            <xs:element name="message" type="xs:string"/>
+            <xs:element name="fileSize" type="xs:positiveInteger" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <!-- Enumération pour le type d'opération -->
+    <xs:simpleType name="OperationTypeEnum">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="UPLOAD"/>
+            <xs:enumeration value="TELECHARGER"/>
+            <xs:enumeration value="SUPPRIMER"/>
+            <xs:enumeration value="RESUMER"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Enumération pour le statut de l'opération -->
+    <xs:simpleType name="OperationStatusEnum">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="SUCCESS"/>
+            <xs:enumeration value="ERROR"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>
+
